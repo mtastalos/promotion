@@ -33,13 +33,8 @@ async function syncInstance(instanceId: string, platform: Platform): Promise<voi
 }
 
 async function tick(): Promise<void> {
-  // Fetch all posted instances that have a platform_post_id
-  const result = await postAnalyticsRepository.findPostedInstancesByProfile('');
-
-  // In a real system, iterate over all profiles or pass profile IDs from a config.
-  // For now, the query above would need to be scoped — see comment in postAnalytics.repository.
-  // This worker is intentionally left as a skeleton; plug in profile iteration here.
-  console.log('[analytics] Sync tick — implement profile iteration here');
+  // Skeleton: plug in profile iteration here when ready.
+  // findPostedInstancesByProfile requires a valid profile UUID — skip until implemented.
 }
 
 export function startAnalyticsSyncWorker(): NodeJS.Timeout {
